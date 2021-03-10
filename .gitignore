@@ -1,0 +1,12 @@
+node_modules/
+dist/
+
+electron-builder.env
+assets/
+*.css
+app.js
+main.js
+installer.nsh
+index.html
+yarn.lock
+

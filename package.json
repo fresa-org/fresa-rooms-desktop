@@ -1,0 +1,75 @@
+{
+  "name": "fresa-rooms-desktop",
+  "version": "0.1.0",
+  "description": "Fresa Rooms Desktop.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "prod": "npm run build",
+    "publish": "npm run deploy",
+    "clean": "rm -rf dist",
+    "build": "electron-builder build -mwl -p never",
+    "deploy": "electron-builder build -mwl -p always"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fresa-org/fresa-rooms-desktop"
+  },
+  "author": "imdhemy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imdhemy/fresa-rooms-desktop/issues"
+  },
+  "homepage": "https://github.com/imdhemy/fresa-rooms-desktop#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "electron-log": "^4.3.1",
+    "electron-updater": "^4.3.5",
+    "i18next": "^19.8.7",
+    "i18next-node-fs-backend": "^2.1.3",
+    "jss": "^10.5.1",
+    "jss-rtl": "^0.3.0",
+    "normalize.css": "^8.0.1",
+    "react-i18next": "^11.8.5",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.12.13",
+    "@babel/preset-react": "^7.12.10",
+    "browser-sync": "^2.26.14",
+    "browser-sync-webpack-plugin": "2.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^11.2.1",
+    "electron-builder": "^22.9.1",
+    "electron-reloader": "^1.2.0",
+    "laravel-mix": "^6.0.11",
+    "postcss": "^8.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "build": {
+    "appId": "com.fresaapp.class.rooms",
+    "productName": "Fresa Class Rooms",
+    "publish": {
+      "provider": "github",
+      "owner": "imdhemy",
+      "releaseType": "release",
+      "publishAutoUpdate": true
+    },
+    "mac": {
+      "category": "Education"
+    },
+    "win": {
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "linux": {
+      "category": "Education"
+    },
+    "nsis": {
+      "createDesktopShortcut": "always",
+      "createStartMenuShortcut": true
+    }
+  }
+}
